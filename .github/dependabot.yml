@@ -1,0 +1,91 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: 'devcontainers'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 999
+  - package-ecosystem: 'docker'
+    directories:
+      - '/.devcontainer'
+    schedule:
+      interval: 'weekly'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 999
+    groups:
+      artifacts:
+        patterns:
+          - 'actions/*-artifact'
+      caches:
+        patterns:
+          - 'actions/cache'
+          - 'actions/cache/*'
+      sast:
+        patterns:
+          - 'github/codeql-*'
+          - 'actions/dependency-review-action'
+          - 'step-security/*'
+          - 'microsoft/security-devops-action'
+          - 'microsoft/DevSkim-Action'
+          - 'ossf/*'
+  - package-ecosystem: 'npm'
+    directory: '/'
+    registries: '*'
+    schedule:
+      interval: 'weekly'
+    cooldown:
+      semver-major-days: 30
+      exclude:
+        # Exclude internal
+        - '@demosjarco/*'
+    versioning-strategy: increase
+    open-pull-requests-limit: 999
+    groups:
+      ai:
+        patterns:
+          - '@modelcontextprotocol/*'
+          - 'ai'
+          - '@ai-sdk/*'
+          - 'agents'
+          - 'workers-ai-provider'
+      cloudflare:
+        patterns:
+          - 'cloudflare'
+          - '@cloudflare/*'
+          - 'wrangler'
+      code-management:
+        patterns:
+          - 'prettier'
+          - 'prettier-plugin-*'
+          - '@demosjarco/prettier-config'
+          - 'eslint'
+          - 'eslint-plugin-*'
+          - '@eslint/*'
+          - 'typescript-eslint'
+      db:
+        patterns:
+          - 'drizzle-*'
+      hono:
+        patterns:
+          - 'hono'
+          - '@hono/*'
+      typescript-core:
+        patterns:
+          - 'typescript'
+          - 'tsx'
+      typescript-types:
+        patterns:
+          - '@types/*'
+          - '@cloudflare/workers-types'
+      validation:
+        patterns:
+          - 'zod'
+          - 'validator'
