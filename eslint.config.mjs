@@ -1,6 +1,7 @@
 import eslint from '@eslint/js';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
+import drizzlePlugin from 'eslint-plugin-drizzle';
 import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
@@ -10,6 +11,7 @@ export default defineConfig({
 	plugins: {
 		'@typescript-eslint': tseslint.plugin,
 		typescriptEslint,
+		drizzle: drizzlePlugin,
 	},
 	languageOptions: {
 		parser: tseslint.parser,
@@ -24,7 +26,10 @@ export default defineConfig({
 			tsconfigRootDir: import.meta.dirname,
 		},
 	},
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	rules: {
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+		...drizzlePlugin.configs.recommended.rules,
 		'no-async-promise-executor': 'off',
 		'@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: false }],
 		'@typescript-eslint/no-empty-object-type': ['error', { allowInterfaces: 'with-single-extends' }],

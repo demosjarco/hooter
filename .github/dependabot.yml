@@ -48,6 +48,11 @@ updates:
         - '@demosjarco/*'
     versioning-strategy: increase
     open-pull-requests-limit: 999
+    ignore:
+      # Lock to LTS
+      - dependency-name: '@types/node'
+        versions:
+          - '>=23.0.0'
     groups:
       ai:
         patterns:
