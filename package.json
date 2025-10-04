@@ -4,7 +4,9 @@
 	"description": "Hoot about the Woot",
 	"scripts": {
 		"fmt": "prettier --check .",
-		"fmt:fix": "prettier --write ."
+		"fmt:fix": "prettier --write .",
+		"lint": "eslint **/*.*ts*",
+		"lint:fix": "npm run lint -- --fix"
 	},
 	"repository": {
 		"type": "git",
@@ -21,7 +23,11 @@
 	"prettier": "@demosjarco/prettier-config",
 	"devDependencies": {
 		"@demosjarco/prettier-config": "^1.0.2",
+		"@eslint/js": "^9.37.0",
+		"eslint": "^9.37.0",
+		"eslint-config-prettier": "^10.1.8",
 		"prettier": "^3.6.2",
-		"typescript": "^5.9.3"
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.45.0"
 	}
 }
