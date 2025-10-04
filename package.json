@@ -1,0 +1,18 @@
+{
+	"type": "module",
+	"name": "hooter",
+	"description": "Hoot about the Woot",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/demosjarco/hooter.git"
+	},
+	"author": "DemosJarco <1209494+demosjarco@users.noreply.github.com>",
+	"license": "Apache-2.0",
+	"private": true,
+	"bugs": {
+		"url": "https://github.com/demosjarco/hooter/issues"
+	},
+	"homepage": "https://github.com/demosjarco/hooter#readme",
+	"workspaces": []
+}
