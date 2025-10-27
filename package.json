@@ -22,7 +22,7 @@
 	"workspaces": [],
 	"prettier": "@demosjarco/prettier-config",
 	"dependencies": {
-		"drizzle-orm": "^0.44.6"
+		"drizzle-orm": "^0.44.7"
 	},
 	"devDependencies": {
 		"@demosjarco/prettier-config": "^1.0.2",
