@@ -22,13 +22,13 @@
 	"workspaces": [],
 	"prettier": "@demosjarco/prettier-config",
 	"dependencies": {
-		"drizzle-orm": "^0.44.6"
+		"drizzle-orm": "^0.44.7"
 	},
 	"devDependencies": {
 		"@demosjarco/prettier-config": "^1.0.2",
 		"@eslint/js": "^9.37.0",
 		"@types/node": "^22.18.8",
-		"drizzle-kit": "^0.31.5",
+		"drizzle-kit": "^0.31.6",
 		"eslint": "^9.37.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-drizzle": "^0.2.3",
